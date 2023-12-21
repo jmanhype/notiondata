@@ -1,0 +1,11 @@
+.todo-item {
+  padding: 8px;
+  margin: 8px 0;
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+
+.todo-item.done {
+  text-decoration: line-through;
+  color: #a0a0a0;
+}
