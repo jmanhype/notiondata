@@ -1,0 +1,8 @@
+<!-- Icon components (social media and utility icons) -->
+<script setup lang="ts">
+import { h } from 'vue';
+
+export default ({ props }) => {
+  return h('svg', { ...props }, h('path', ...)); // This will need specific path data per icon
+};
+</script>

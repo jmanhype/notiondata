@@ -1,0 +1,24 @@
+<!-- LineChart.astro -->
+<LineChart className="{props.className}">
+  <ResponsiveLine
+    data="{props.data}"
+    enableCrosshair="{false}"
+    margin="{props.margin}"
+    xScale="{props.xScale}"
+    yScale="{props.yScale}"
+    axisTop="{null}"
+    axisRight="{null}"
+    axisBottom="{props.axisBottom}"
+    axisLeft="{props.axisLeft}"
+    colors="{props.colors}"
+    pointSize="{props.pointSize}"
+    pointColor="{props.pointColor}"
+    pointBorderWidth="{props.pointBorderWidth}"
+    pointBorderColor="{props.pointBorderColor}"
+    pointLabelYOffset="{props.pointLabelYOffset}"
+    useMesh="{true}"
+    legends="{props.legends}"
+    theme="{props.theme}"
+    role="application"
+  />
+</LineChart>
