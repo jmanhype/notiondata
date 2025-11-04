@@ -1,8 +1,18 @@
+---
+/**
+ * Footer Component
+ *
+ * Site footer with copyright notice and social media links.
+ * Uses TailwindCSS for styling.
+ */
+
+const currentYear = new Date().getFullYear();
+---
 
 <!-- src/components/Footer.astro -->
 <footer class="py-8">
   <div class="flex justify-between items-center">
-    <p>© 2023 Bricks Cloud Technologies, Inc. All rights reserved.</p>
+    <p>© {currentYear} Bricks Cloud Technologies, Inc. All rights reserved.</p>
     <div class="flex space-x-4">
       <!-- SVGs for social icons would go here -->
       <span>Twitter</span>

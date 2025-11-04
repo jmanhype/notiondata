@@ -1,17 +1,38 @@
 ---
 interface Props {
 	title: string;
+	description?: string;
+	author?: string;
+	keywords?: string;
 }
 
-const { title } = Astro.props;
+const {
+	title,
+	description = "A modern web application built with Astro and TailwindCSS",
+	author = "NotionData",
+	keywords = "astro, tailwindcss, web development, modern web"
+} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content={author} />
+		<meta name="keywords" content={keywords} />
+
+		<!-- Open Graph / Social Media -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
