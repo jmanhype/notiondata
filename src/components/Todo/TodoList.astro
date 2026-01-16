@@ -1,0 +1,27 @@
+<script>
+// State management for the Todo list will be handled here
+let todos = [];
+
+function addTodo(event) {
+  // Function to add a new todo
+}
+
+function deleteTodo(id) {
+  // Function to delete a todo
+}
+
+function toggleTodoStatus(id) {
+  // Function to toggle the completion status of a todo
+}
+</script>
+
+<ul>
+  {todos.map((todo) => (
+    <li>{todo.title}</li>
+  ))}
+</ul>
+
+<form on:submit={addTodo}>
+  <input type="text" placeholder="Add a new todo..." />
+  <button type="submit">Add</button>
+</form>
